@@ -24,7 +24,7 @@ https://chitrathakur.github.io/Neon-Calculator/
 
 ## 📂 Project Structure
 
--index.html # Main HTML structure
--style.css # Neon-themed styling
--script.js # Calculator logic
--README.md # Project documentation
+- index.html # Main HTML structure
+- style.css # Neon-themed styling
+- script.js # Calculator logic
+- README.md # Project documentation
