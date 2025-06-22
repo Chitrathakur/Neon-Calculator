@@ -14,7 +14,7 @@ A stylish, responsive calculator built using HTML, CSS, and JavaScript. This pro
   - Clear & Delete functionalities
 
 ## 🚀 Live Demo
-
+https://chitrathakur.github.io/Neon-Calculator/
 
 ## 🛠️ Built With
 
