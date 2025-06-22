@@ -1,119 +1,85 @@
-/* Base Reset and Fonts */
 *, *::before, *::after {
-  box-sizing: border-box;
-  font-family: 'Orbitron', sans-serif;
-  font-weight: 400;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 400;
 }
 
-/* Body Styling */
 body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: radial-gradient(circle at top left, #0f0f0f, #1a1a1a);
-  overflow: hidden;
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle at top left, #0f0f0f, #1a1a1a);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
 }
 
-/* Calculator Grid */
 .calculator-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 100px);
-  grid-template-rows: minmax(140px, auto) repeat(5, 100px);
-  background: rgba(25, 25, 25, 0.9);
-  border: 2px solid #00ffe0;
-  border-radius: 20px;
-  padding: 10px;
-  box-shadow: 0 0 40px rgba(0, 255, 255, 0.3), 0 0 10px #00ffe077 inset;
-  backdrop-filter: blur(8px);
-  justify-content: center;
-  align-content: center;
+    display: grid;
+    grid-template-columns: repeat(4, 80px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 80px);
+    justify-content: center;
+    align-content: center;
+    background: rgba(25, 25, 25, 0.9);
+    border: 2px solid #00ffe0;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 0 0 40px rgba(0, 255, 255, 0.3), 0 0 10px #00ffe077 inset;
+    backdrop-filter: blur(8px);
 }
 
-/* Buttons */
 .calculator-grid > button {
-  font-size: 1.8rem;
-  color: #00ffe0;
-  background: #121212;
-  border: 1px solid #00ffe080;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: all 0.2s ease;
+    font-size: 1.8rem;
+    color: #00ffe0;
+    background: #121212;
+    border: 1px solid #00ffe080;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 0 10px transparent;
 }
 
 .calculator-grid > button:hover {
-  background-color: #1f1f1f;
-  box-shadow: 0 0 15px #00ffe080;
-  transform: scale(1.05);
+    background-color: #1f1f1f;
+    box-shadow: 0 0 15px #00ffe080;
+    transform: scale(1.05);
 }
 
 .calculator-grid > button:active {
-  background-color: #00ffe0;
-  color: #121212;
-  box-shadow: 0 0 20px #00ffe0;
-  transform: scale(0.95);
+    background-color: #00ffe0;
+    color: #121212;
+    box-shadow: 0 0 20px #00ffe0;
+    transform: scale(0.95);
 }
 
 .span-two {
-  grid-column: span 2;
+    grid-column: span 2;
 }
 
-/* Output Display */
 .output {
-  grid-column: 1 / -1;
-  background-color: rgba(0, 0, 0, 0.9);
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: space-around;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: inset 0 0 10px #00ffe022;
-  color: #00ffe0;
-  font-size: 2rem;
-  overflow-wrap: break-word;
-  word-break: break-word;
+    grid-column: 1 / -1;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: inset 0 0 10px #00ffe022;
+    color: #00ffe0;
+    font-size: 2rem;
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
 
 .output .previous-operand {
-  color: #888;
-  font-size: 1.2rem;
+    color: #888;
+    font-size: 1.2rem;
 }
 
 .output .current-operand {
-  color: #00ffe0;
-  font-size: 2.5rem;
-  text-shadow: 0 0 8px #00ffe088;
-}
-
-/* ✅ Responsive Layout */
-@media (max-width: 480px) {
-  .calculator-grid {
-    grid-template-columns: repeat(4, minmax(60px, 1fr));
-    grid-template-rows: minmax(100px, auto) repeat(5, minmax(80px, 1fr));
-    padding: 8px;
-    width: 95%;
-    max-width: 100%;
-  }
-
-  .calculator-grid > button {
-    font-size: 1.2rem;
-    padding: 6px;
-  }
-
-  .output {
-    font-size: 1.5rem;
-    padding: 12px;
-  }
-
-  .output .previous-operand {
-    font-size: 1rem;
-  }
-
-  .output .current-operand {
-    font-size: 2rem;
-  }
+    color: #00ffe0;
+    font-size: 2.5rem;
+    text-shadow: 0 0 8px #00ffe088;
 }
